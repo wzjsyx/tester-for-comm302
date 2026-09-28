@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tv-black: #131722;
+  --color-tv-gray: #787B86;
+  --color-tv-border: #E0E3EB;
+  --color-tv-surface: #F8F9FD;
+  --color-tv-cardHover: #F0F3FA;
+  --color-tv-blue: #2962FF;
+  --color-tv-blueHover: #1E53E5;
+  --color-tv-green: #089981;
+  --color-tv-greenBg: rgba(8, 153, 129, 0.1);
+  --color-tv-red: #F23645;
+  --color-tv-redBg: rgba(242, 54, 69, 0.1);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Trebuchet MS", Roboto, Ubuntu, sans-serif;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .gradient-cta {
+    background: linear-gradient(90deg, #2962FF 0%, #8E24AA 100%);
+    transition: filter 0.2s ease, transform 0.1s ease;
+  }
+  .gradient-cta:hover {
+    filter: brightness(1.08);
+  }
+  .sparkline-green {
+    stroke: #089981;
+    stroke-width: 2;
+    fill: url(#greenGradient);
+  }
+  .sparkline-red {
+    stroke: #F23645;
+    stroke-width: 2;
+    fill: url(#redGradient);
+  }
+}
+
+body {
+  color: #131722;
+  background-color: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS", Roboto, Ubuntu, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
